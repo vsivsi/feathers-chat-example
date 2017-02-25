@@ -48,7 +48,7 @@
       },
       tryRemoveMessage (message) {
         // Remove message from the db
-        services.messageService.remove(message)
+        services.messageService.remove(message._id).then((res) => console.log('Removed:', res), (err) => console.error('Error:', err))
       }
     }
   }
